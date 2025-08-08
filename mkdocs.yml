@@ -1,7 +1,92 @@
-site_name: My Docs
+site_name: My Project Documentation
+site_url: https://USERNAME.github.io/REPO
+site_description: Official documentation for My Project
+site_author: My Team
+
+# Theme settings
 theme:
-  name: material  # for Material theme
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  logo: images/favicon.png
+  favicon: images/logo.png
+
+# Navigation structure
 nav:
   - Home: index.md
-  - Setup: setup.md
+  - Getting Started:
+      - Introduction: intro.md
+      - Installation: installation.md
+      - Quick Start: quickstart.md
+  - Guides:
+      - Configuration: guides/configuration.md
+      - Usage: guides/usage.md
+  - Reference:
+      - API: reference/api.md
+      - CLI: reference/cli.md
   - FAQ: faq.md
+  - About: about.md
+
+# Plugins
+plugins:
+  - search
+  - tags
+  - awesome-pages
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.tilde
+
+# Extra site config
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/USERNAME/REPO
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/YOUR_HANDLE

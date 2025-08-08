@@ -1,0 +1,7 @@
+site_name: My Docs
+theme:
+  name: material  # for Material theme
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - FAQ: faq.md

@@ -2,46 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://USERNAME.github.io/REPO/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/about/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/ci/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/faq/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/dev-setup/</loc>
+         <lastmod>2025-08-17</lastmod>
+    </url>
+    <url>
+         <loc>https://USERNAME.github.io/REPO/diagrams/</loc>
+         <lastmod>2025-08-17</lastmod>
+    </url>
+    <url>
+         <loc>https://USERNAME.github.io/REPO/git-methodologies/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
          <loc>https://USERNAME.github.io/REPO/installation/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/intro/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/meetings/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/quickstart/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/release-notes/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/setup/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/sprint-checklists/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://USERNAME.github.io/REPO/guides/configuration/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://USERNAME.github.io/REPO/guides/usage/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://USERNAME.github.io/REPO/reference/api/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://USERNAME.github.io/REPO/reference/cli/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://USERNAME.github.io/REPO/reports/2652227/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
 </urlset>

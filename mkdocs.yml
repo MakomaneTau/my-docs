@@ -33,22 +33,35 @@ theme:
   logo: images/favicon.png
   favicon: images/logo.png
 
-# Navigation structure #Can Edit 
+# Navigation structure
 nav:
   - Home: index.md
   - Getting Started:
-      - Introduction: intro.md
-      - Installation: installation.md
-      - Quick Start: quickstart.md
-  - Guides:
-      - Configuration: guides/configuration.md
-      - Usage: guides/usage.md
-  - Reports:
-      - Makomane-Tau: reports/2652227.md
+      - Development: getting-started/dev-setup.md
+      - Installation: getting-started/installation.md
+  - Documentation:
+      - Architecture: documentation/architecture.md
+      - App Design : documentation/AppDesigns.md
+      - Features:
+          - Feature 1: documentation/features/feature1.md
+          - Feature 2: documentation/features/feature2.md
+          - Feature 3: documentation/features/feature3.md
+      - Uml Diagrams:
+          - Sprint 1: documentation/uml/sprint1.md
+          - Sprint 2: documentation/uml/sprint2.md
+          - Sprint 3: documentation/uml/sprint3.md
+          - Sprint 4: documentation/uml/sprint4.md
 
-  - FAQ: faq.md
-  - About: about.md
-  
+  - Workflow:
+      - Sprint Checklist: workflow/sprint-checklists.md
+      - Meetings: workflow/meetings.md
+      - Release Notes: workflow/release-notes.md
+      - Git Methodology: workflow/git-methodology.md
+      - Testing and Quality Assurance: workflow/testing.md
+
+      
+  - Reports:
+      - Makomane Tau (2652227): reports/2652227.md
 ###########################################
 # Plugins
 plugins:

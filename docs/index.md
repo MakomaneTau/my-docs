@@ -9,24 +9,64 @@
 
 ## Table of contents
 1. [Quick summary](#quick-summary)
-2. [Features](#features)  
-3. [Tech stack](#tech-stack)  
-4. [Architecture & data model](#architecture--data-model)  
-5. [API endpoints](#api-endpoints)  
-6. [Local setup & development](#local-setup--development)  
-7. [Testing & CI](#testing--ci)  
-8. [Sprint 1 deliverables](#sprint-1-deliverables-rubric-aligned)  
-9. [Privacy, safety & moderation](#privacy-safety--moderation)  
-10. [Contributing](#contributing)  
-11. [Contact & support](#contact--support)  
-12. [License](#license)
+2. [Team member roles](#team-member-roles)
+3. [Project Management Methodology](#project-management-methodology)
+4. [Features](#features)  
+5. [Tech stack](#tech-stack) 
+6. [Git Methodology](#git-Methodology)  
+7. [Architecture & data model](#architecture--data-model)  
+8. [API endpoints](#api-endpoints)  
+9. [Local setup & development](#local-setup--development)  
+10. [Testing & CI](#testing--ci)  
+11. [Sprint 1 deliverables](#sprint-1-deliverables-rubric-aligned)  
+12. [Privacy, safety & moderation](#privacy-safety--moderation)  
+13. [Contributing](#contributing)  
+14. [Contact & support](#contact--support)  
+15. [License](#license)
 
 ---
 
 ## Quick summary
 - **Purpose:** Help users make anonymous, cross-cultural connections via delayed text letters.  
 - **Key constraints:** Text-only (no file/media), anonymous (no names/emails published), moderation/reporting, OAuth-based sign-in for account protection.  
-- **Target users:** Curious learners, language learners, students, and anyone seeking low-pressure cultural exchange.
+- **Target users:** Curious learners,language learners, students, and anyone seeking low-pressure cultural exchange.
+
+## Team member roles
+- **Product Owner & Client:**Nathan (Responsible for defining the product vision and prioritizing features.)
+- **Scrum Master:**Diana (Facilitates the Scrum process, leads meetings, and ensures the team stays on track.)
+- **Team:**The group of individuals who develop, test, and support the product, include:
+    - Keevon Jacobs
+    - Toure Makomane
+    - Ponani Ngobeni
+    - Khethani Vhuthuhawe
+    - Smiso Ndlovu
+    - Diana Bingani
+
+## Project Management Methodology
+  Youtube reference:
+  Introduction to scrum - https://www.youtube.com/watch?v=9TycLR0TqFA&t=10s
+  Online Book Source
+  The 2020 Scrum Guide by Schwaber & Sutherland - https://scrumguides.org/scrum-guide.html
+
+- We have chosen **Agile Scrum** as our project management methodology. Scrum is an iterative and collaborative framework that divides the project into short, manageable cycles called sprints. Each sprint produces an incremental release, allowing us to continuously improve the product, respond to feedback, and adapt to changing requirements throughout the development process.
+
+- **Three Key Artifacts in Scrum**
+    - Product Backlog: A comprehensive list of all desired features and requirements for the product, including items planned for future sprints.
+    - Sprint Backlog: A prioritized list of features and tasks selected from the product backlog for completion during the current sprint.
+    - Burn Down Chart: A visual representation of progress, showing how much work remains in the sprint backlog over time.
+
+- **Three Main Ceremonies**
+    - Sprint Planning: All team members meet to discuss user stories, define sprint goals, and estimate the effort required for each task.
+    - Weekly Scrum (Daily Stand-up): Team members briefly share what they have completed, what they are currently working on, and any obstacles they are facing
+    - Sprint Review / Retrospective: Held at the end of each sprint. The team demonstrates progress to the client and reflects on what went well and what can be improved in future sprints.
+                    
+- **Sequence of our project management methodology**
+    1. Product Backlog
+    2. Sprint Planning
+    3. Sprint Backlog
+    4. Sprint 
+    5. Sprint Review 
+    6. Sprint Retrospective
 
 ## Features
 - **Random Matchmaking** — pair users globally with optional filters (language, region/time-zone).  
@@ -36,20 +76,51 @@
 - **Moderation** — reporting, moderation logs, blocking.  
 - **Settings & Safety** — block/report, toggle match preferences, delete account.
 
-## Tech stack
+## Tech Stack & Rational
 
 **Frontend**
-- Next.js - Modern UI Library with hooks and context
-- Tailwind CSS  - Utility-first CSS framework
-- React Query or Context API
+
+  - **Next.js:** Modern UI Library with hooks and context
+    Youtube reference:
+    - Why next.js over react - https://www.youtube.com/watch?v=msJicleNHkA
+      - **Routing:** Next.js provides a built-in file-based routing system that automatically maps files in the pages directory to URLs, making navigation intuitive without extra configuration.
+      - **Code-Splitting:** It automatically splits JavaScript by page, so users only download the code needed for the page they’re viewing, improving load times.
+      - **Pre-Rendering:** Next.js can generate HTML for each page at build time (SSG) or on request (SSR), boosting SEO and performance compared to client-side rendering
+      - **API Support:** It allows you to create serverless API routes directly in the same project, removing the need for a separate backend for simple server-side logic
+
+- **Tailwind CSS:** Utility-first CSS framework
+    Youtube reference:
+    - Why tailwind css - https://www.youtube.com/watch?v=pKrPeUQiDu4
+    - **Utility-First Styling:** Tailwind offers a wide range of low-level utility classes that let you style elements directly in your markup without writing separate CSS files.
+    - **Customization:** It’s highly configurable via a single config file, allowing you to define colors, spacing, typography, and breakpoints to match your design system.
+    - **Responsive Design:** Built-in responsive variants make it easy to create designs that adapt seamlessly across different screen sizes.
+    - **Performance:** Tailwind automatically purges unused CSS in production, keeping file sizes small and load times fast.
+- React Query
+- React Context API
 
 **Backend**
+
 - Next.js API routes  
-- Firebase - Backend-as-a-Service Platform
-    - **Firebase Auth** - Authentication service
-    - **Firestore** - NoSQL document database
+- **Firebase**
+  - Backend-as-a-Service Platform
+    - **Firebase Auth**: Firebase Authentication provides ready-to-use sign-in methods (email, password, social logins) with secure session management, reducing the need to build auth from scratch.
+    - **Firestore**: A scalable NoSQL database that syncs data in real-time across clients, making it ideal for dynamic and collaborative apps.  
+- **Express.js**
+  - **Minimal and Flexible:** Express provides a lightweight core with the flexibility to add only the middleware and features you need.
+  - **Routing:** Offers a simple yet powerful routing system to handle different HTTP methods and URL patterns.
+  - **Middleware Support:** Easily integrates third-party or custom middleware to handle requests, responses, authentication, and more.
+  - **REST API Development:** Well-suited for building robust and scalable RESTful APIs quickly with minimal boilerplate..
+
+**Deployment**
+
+- **Netlify** 
+    - **Continuous Deployment:** Automatically builds and deploys your site whenever you push changes to your Git repository.
+    - **Global CDN:** Delivers your site through a fast, globally distributed content delivery network for low-latency access worldwide
+    - **Serverless Functions:** Allows you to run backend logic without maintaining a server, ideal for lightweight APIs and dynamic features.
+    - **Instant Rollbacks:** Lets you revert to any previous deploy instantly, ensuring quick recovery from issues.
 
 **Development Infrastructure**
+
 - GitHub for version control  
 - GitHub Actions for CI (test.yml)
     - Jest for unit testing
@@ -57,6 +128,34 @@
 - Hosting: Netlify (One-click deployment)
 - Secrets & Environment management: Github Secrets & Netlify Environment Variables
 - Docs site: GitHub Pages (MkDocs)
+
+## Git Methodology
+- We follow a **main / dev / feature** branching strategy:
+    - main: always stable & deployed.
+    - dev: integration branch where features are merged.
+    - feature/name: each new feature or fix has its own branch.
+
+- **Workflow**:
+    1. Switch to latest dev branch
+    2. Pull latest dev.
+    3. Create a feature/* branch.
+    4. Do your changes
+    5. Run tests
+    6. Stage & Commit(conventional commits)
+    7. Pull latest dev to your feature branch
+    8. Push changes.
+    9. Open a Pull Request (PR) into dev.
+    10. After review & testing, merge dev to main.
+
+- **Code Quality Checks**:
+    - Run ESLint (npx eslint . --fix) and Jest tests (npm test) before pushing.
+    - GitHub Actions runs CI(tests & lint) checks on every PR.
+    - After review, merge dev → main for releases
+
+- **Rules**:
+    - No direct commits to main.
+    - All code goes through PR review.
+    - Netlify auto-deploys from main.
 
 ## Architecture & data model
 
@@ -125,28 +224,28 @@ moderation logs
   "actionTaken": null
 }
 ```
-
-## API Endpoints
+-->
+### API Endpoints
 
 > See [docs/api.md](docs/api.md) for full request/response examples.
 
-### Auth
+#### Auth
 - `GET /auth/oauth/login` — Redirect user to OAuth provider.
 - `POST /auth/oauth/callback` — Exchange provider code for app JWT.
 
-### Profiles
+#### Profiles
 - `POST /profiles` — Create or update a profile.
 - `GET /profiles/:anonId` — Retrieve a profile by public anon ID.
 
-### Matchmaking
+#### Matchmaking
 - `POST /match` — Request a new match (with optional filters).
 - `GET /matches` — List active matches for the current user.
 
-### Messaging
+#### Messaging
 - `POST /messages` — Write a letter (delayed delivery).  
 - `GET /messages/:matchId` — Get delivered messages for a match.
 
-### Moderation
+#### Moderation
 - `POST /moderation/report` — Report a message.  
 - `GET /moderation/reports` — Moderator-only list of reports.  
 - `POST /admin/moderation/:reportId/action` — Moderator resolves report.  
@@ -154,48 +253,8 @@ moderation logs
 
 ---
 
-## Local Setup & Development
 
-### Prerequisites
-- Node.js 18+  
-- npm / pnpm / yarn  
-- Firebase project (Auth + Firestore enabled)  
-- Netlify
-
-### `.env.local`
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
-FIREBASE_API_KEY=xxxx
-FIREBASE_AUTH_DOMAIN=xxxx.firebaseapp.com
-FIREBASE_PROJECT_ID=xxxx
-FIREBASE_STORAGE_BUCKET=xxxx.appspot.com
-FIREBASE_MESSAGING_SENDER_ID=xxxx
-FIREBASE_APP_ID=xxxx
-```
-
-### Install dependencies
-```sh
-npm install
-```
-
-### Run locally
-```sh
-npm run dev
-```
-
-### Build for production
-```sh
-npm run build
-```
-
-### Run tests
-```sh
-npm test
-```
-
----
-
-## Testing & CI
+### Testing & CI
 
 - **Jest** for unit and integration tests
 - **Testing Library** for React component tests
@@ -212,7 +271,7 @@ npm test
 
 ---
 
-## Privacy, Safety & Moderation
+### Privacy, Safety & Moderation
 
 - No personal info shared between users
 - All messages are text-only, no media
@@ -222,7 +281,7 @@ npm test
 
 ---
 
-## Contributing
+### Contributing
 
 1. Fork the repo and clone locally
 2. Create a new branch (`git checkout -b feature/my-feature`)
@@ -233,20 +292,20 @@ See CONTRIBUTING.md for more details.
 
 ---
 
-## Contact & Support
+### Contact & Support
 
 - Issues: [GitHub Issues](https://github.com/MakomaneTau/GlobeTalk/issues)
 - Email: [pontshotau09@gmail.com](mailto:pontshotau09@gmail.com)
 
 ---
 
-## License
+### License
 
 This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## MkDocs Quick Reference
+### MkDocs Quick Reference
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

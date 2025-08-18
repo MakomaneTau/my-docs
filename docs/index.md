@@ -38,18 +38,76 @@
 
 ## Tech stack
 
-**Frontend**
-- Next.js - Modern UI Library with hooks and context
-- Tailwind CSS  - Utility-first CSS framework
-- React Query or Context API
+### Frontend
 
-**Backend**
-- Next.js API routes  
-- Firebase - Backend-as-a-Service Platform
-    - **Firebase Auth** - Authentication service
-    - **Firestore** - NoSQL document database
+#### Nextjs
 
-**Development Infrastructure**
+Youtube reference:
+Why next.js over react - https://www.youtube.com/watch?v=msJicleNHkA
+
+* Routing - Next.js provides a built-in file-based routing system that automatically
+maps files in the pages directory to URLs, making navigation intuitive without extra
+configuration.
+* Code-Splitting – It automatically splits JavaScript by page, so users only download
+the code needed for the page they’re viewing, improving load times.
+* Pre-Rendering – Next.js can generate HTML for each page at build time (SSG) or on
+request (SSR), boosting SEO and performance compared to client-side rendering.
+* API Support – It allows you to create serverless API routes directly in the same
+project, removing the need for a separate backend for simple server-side logic
+
+#### Tailwind CSS
+Youtube reference:
+Why tailwind css - https://www.youtube.com/watch?v=pKrPeUQiDu4
+
+* Customization – It’s highly configurable via a single config file, allowing you to
+define colors, spacing, typography, and breakpoints to match your design system
+* Utility-First Styling – Tailwind offers a wide range of low-level utility classes that let
+you style elements directly in your markup without writing separate CSS files.
+* Responsive Design – Built-in responsive variants make it easy to create designs
+that adapt seamlessly across different screen sizes
+* Performance – Tailwind automatically purges unused CSS in production, keeping
+file sizes small and load times fast.
+
+
+
+
+### Backend
+
+#### Firebase
+
+* Authentication – Firebase Authentication provides ready-to-use sign-in methods
+(email, password, social logins) with secure session management, reducing the
+need to build auth from scratch.
+* Cloud Firestore – A scalable NoSQL database that syncs data in real-time across
+clients, making it ideal for dynamic and collaborative apps.
+
+#### Express.js
+
+* Minimal and Flexible – Express provides a lightweight core with the flexibility to add
+only the middleware and features you need.
+* Routing – Offers a simple yet powerful routing system to handle different HTTP
+methods and URL patterns.
+* Middleware Support – Easily integrates third-party or custom middleware to handle
+requests, responses, authentication, and more.
+* REST API Development – Well-suited for building robust and scalable RESTful APIs
+quickly with minimal boilerplate.
+
+
+### Deployment
+
+#### Netlify
+* Continuous Deployment – Automatically builds and deploys your site whenever
+you push changes to your Git repository.
+* Global CDN – Delivers your site through a fast, globally distributed content
+delivery network for low-latency access worldwide
+* Serverless Functions – Allows you to run backend logic without maintaining a
+server, ideal for lightweight APIs and dynamic features.
+* Instant Rollbacks – Lets you revert to any previous deploy instantly, ensuring
+quick recovery from issues.
+
+
+
+<!-- **Development Infrastructure**
 - GitHub for version control  
 - GitHub Actions for CI (test.yml)
     - Jest for unit testing
@@ -125,28 +183,28 @@ moderation logs
   "actionTaken": null
 }
 ```
-
-## API Endpoints
+-->
+### API Endpoints
 
 > See [docs/api.md](docs/api.md) for full request/response examples.
 
-### Auth
+#### Auth
 - `GET /auth/oauth/login` — Redirect user to OAuth provider.
 - `POST /auth/oauth/callback` — Exchange provider code for app JWT.
 
-### Profiles
+#### Profiles
 - `POST /profiles` — Create or update a profile.
 - `GET /profiles/:anonId` — Retrieve a profile by public anon ID.
 
-### Matchmaking
+#### Matchmaking
 - `POST /match` — Request a new match (with optional filters).
 - `GET /matches` — List active matches for the current user.
 
-### Messaging
+#### Messaging
 - `POST /messages` — Write a letter (delayed delivery).  
 - `GET /messages/:matchId` — Get delivered messages for a match.
 
-### Moderation
+#### Moderation
 - `POST /moderation/report` — Report a message.  
 - `GET /moderation/reports` — Moderator-only list of reports.  
 - `POST /admin/moderation/:reportId/action` — Moderator resolves report.  
@@ -154,48 +212,8 @@ moderation logs
 
 ---
 
-## Local Setup & Development
 
-### Prerequisites
-- Node.js 18+  
-- npm / pnpm / yarn  
-- Firebase project (Auth + Firestore enabled)  
-- Netlify
-
-### `.env.local`
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
-FIREBASE_API_KEY=xxxx
-FIREBASE_AUTH_DOMAIN=xxxx.firebaseapp.com
-FIREBASE_PROJECT_ID=xxxx
-FIREBASE_STORAGE_BUCKET=xxxx.appspot.com
-FIREBASE_MESSAGING_SENDER_ID=xxxx
-FIREBASE_APP_ID=xxxx
-```
-
-### Install dependencies
-```sh
-npm install
-```
-
-### Run locally
-```sh
-npm run dev
-```
-
-### Build for production
-```sh
-npm run build
-```
-
-### Run tests
-```sh
-npm test
-```
-
----
-
-## Testing & CI
+### Testing & CI
 
 - **Jest** for unit and integration tests
 - **Testing Library** for React component tests
@@ -212,7 +230,7 @@ npm test
 
 ---
 
-## Privacy, Safety & Moderation
+### Privacy, Safety & Moderation
 
 - No personal info shared between users
 - All messages are text-only, no media
@@ -222,7 +240,7 @@ npm test
 
 ---
 
-## Contributing
+### Contributing
 
 1. Fork the repo and clone locally
 2. Create a new branch (`git checkout -b feature/my-feature`)
@@ -233,20 +251,20 @@ See CONTRIBUTING.md for more details.
 
 ---
 
-## Contact & Support
+### Contact & Support
 
 - Issues: [GitHub Issues](https://github.com/MakomaneTau/GlobeTalk/issues)
 - Email: [pontshotau09@gmail.com](mailto:pontshotau09@gmail.com)
 
 ---
 
-## License
+### License
 
 This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## MkDocs Quick Reference
+### MkDocs Quick Reference
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

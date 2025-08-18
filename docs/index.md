@@ -215,28 +215,28 @@ moderation logs
   "actionTaken": null
 }
 ```
-
-## API Endpoints
+-->
+### API Endpoints
 
 > See [docs/api.md](docs/api.md) for full request/response examples.
 
-### Auth
+#### Auth
 - `GET /auth/oauth/login` — Redirect user to OAuth provider.
 - `POST /auth/oauth/callback` — Exchange provider code for app JWT.
 
-### Profiles
+#### Profiles
 - `POST /profiles` — Create or update a profile.
 - `GET /profiles/:anonId` — Retrieve a profile by public anon ID.
 
-### Matchmaking
+#### Matchmaking
 - `POST /match` — Request a new match (with optional filters).
 - `GET /matches` — List active matches for the current user.
 
-### Messaging
+#### Messaging
 - `POST /messages` — Write a letter (delayed delivery).  
 - `GET /messages/:matchId` — Get delivered messages for a match.
 
-### Moderation
+#### Moderation
 - `POST /moderation/report` — Report a message.  
 - `GET /moderation/reports` — Moderator-only list of reports.  
 - `POST /admin/moderation/:reportId/action` — Moderator resolves report.  
@@ -244,48 +244,8 @@ moderation logs
 
 ---
 
-## Local Setup & Development
 
-### Prerequisites
-- Node.js 18+  
-- npm / pnpm / yarn  
-- Firebase project (Auth + Firestore enabled)  
-- Netlify
-
-### `.env.local`
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
-FIREBASE_API_KEY=xxxx
-FIREBASE_AUTH_DOMAIN=xxxx.firebaseapp.com
-FIREBASE_PROJECT_ID=xxxx
-FIREBASE_STORAGE_BUCKET=xxxx.appspot.com
-FIREBASE_MESSAGING_SENDER_ID=xxxx
-FIREBASE_APP_ID=xxxx
-```
-
-### Install dependencies
-```sh
-npm install
-```
-
-### Run locally
-```sh
-npm run dev
-```
-
-### Build for production
-```sh
-npm run build
-```
-
-### Run tests
-```sh
-npm test
-```
-
----
-
-## Testing & CI
+### Testing & CI
 
 - **Jest** for unit and integration tests
 - **Testing Library** for React component tests
@@ -302,7 +262,7 @@ npm test
 
 ---
 
-## Privacy, Safety & Moderation
+### Privacy, Safety & Moderation
 
 - No personal info shared between users
 - All messages are text-only, no media
@@ -312,7 +272,7 @@ npm test
 
 ---
 
-## Contributing
+### Contributing
 
 1. Fork the repo and clone locally
 2. Create a new branch (`git checkout -b feature/my-feature`)
@@ -323,20 +283,20 @@ See CONTRIBUTING.md for more details.
 
 ---
 
-## Contact & Support
+### Contact & Support
 
 - Issues: [GitHub Issues](https://github.com/MakomaneTau/GlobeTalk/issues)
 - Email: [pontshotau09@gmail.com](mailto:pontshotau09@gmail.com)
 
 ---
 
-## License
+### License
 
 This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## MkDocs Quick Reference
+### MkDocs Quick Reference
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

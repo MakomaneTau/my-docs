@@ -9,11 +9,11 @@
 
 ## Table of contents
 1. [Quick summary](#quick-summary)
-2. [Team member roles](#Team-member-roles)
-3. [Project Management](#Project-Management)
+2. [Team member roles](#team-member-roles)
+3. [Project Management Methodology](#project-management-methodology)
 4. [Features](#features)  
 5. [Tech stack](#tech-stack) 
-6. [Git Methodology](#Git-Methodology)  
+6. [Git Methodology](#git-Methodology)  
 7. [Architecture & data model](#architecture--data-model)  
 8. [API endpoints](#api-endpoints)  
 9. [Local setup & development](#local-setup--development)  
@@ -42,7 +42,12 @@
     - Smiso Ndlovu
     - Diana Bingani
 
-## Project Management
+## Project Management Methodology
+  Youtube reference:
+  Introduction to scrum - https://www.youtube.com/watch?v=9TycLR0TqFA&t=10s
+  Online Book Source
+  The 2020 Scrum Guide by Schwaber & Sutherland - https://scrumguides.org/scrum-guide.html
+
 - We have chosen **Agile Scrum** as our project management methodology. Scrum is an iterative and collaborative framework that divides the project into short, manageable cycles called sprints. Each sprint produces an incremental release, allowing us to continuously improve the product, respond to feedback, and adapt to changing requirements throughout the development process.
 
 - **Three Key Artifacts in Scrum**
@@ -56,12 +61,12 @@
     - Sprint Review / Retrospective: Held at the end of each sprint. The team demonstrates progress to the client and reflects on what went well and what can be improved in future sprints.
                     
 - **Sequence of our project management methodology**
-    - Product Backlog
-    - Sprint Planning
-    - Sprint Backlog
-    - Sprint 
-    - Sprint Review 
-    - Sprint Retrospective
+    1. Product Backlog
+    2. Sprint Planning
+    3. Sprint Backlog
+    4. Sprint 
+    5. Sprint Review 
+    6. Sprint Retrospective
 
 ## Features
 - **Random Matchmaking** — pair users globally with optional filters (language, region/time-zone).  
@@ -76,12 +81,16 @@
 **Frontend**
 
   - **Next.js:** Modern UI Library with hooks and context
+    Youtube reference:
+    - Why next.js over react - https://www.youtube.com/watch?v=msJicleNHkA
       - **Routing:** Next.js provides a built-in file-based routing system that automatically maps files in the pages directory to URLs, making navigation intuitive without extra configuration.
       - **Code-Splitting:** It automatically splits JavaScript by page, so users only download the code needed for the page they’re viewing, improving load times.
       - **Pre-Rendering:** Next.js can generate HTML for each page at build time (SSG) or on request (SSR), boosting SEO and performance compared to client-side rendering
       - **API Support:** It allows you to create serverless API routes directly in the same project, removing the need for a separate backend for simple server-side logic
 
 - **Tailwind CSS:** Utility-first CSS framework
+    Youtube reference:
+    - Why tailwind css - https://www.youtube.com/watch?v=pKrPeUQiDu4
     - **Utility-First Styling:** Tailwind offers a wide range of low-level utility classes that let you style elements directly in your markup without writing separate CSS files.
     - **Customization:** It’s highly configurable via a single config file, allowing you to define colors, spacing, typography, and breakpoints to match your design system.
     - **Responsive Design:** Built-in responsive variants make it easy to create designs that adapt seamlessly across different screen sizes.

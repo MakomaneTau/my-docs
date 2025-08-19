@@ -110,7 +110,60 @@ Update document: updateDoc(doc(db, "users", docId), { age: 30 })
 Delete document: deleteDoc(doc(db, "users", docId))
 ```
 
+### Next.js + Express for a simple API
+1. Install dependencies (if not done already):
+```bash
+npm install express firebase-admin
+```
+2. Create server.js in your project root:
+```bash
+import express from "express";
+import { initializeApp, applicationDefault } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
 
+const app = express();
+app.use(express.json()); // for parsing JSON bodies
+
+// Initialize Firebase Admin
+initializeApp({
+  credential: applicationDefault(),
+});
+
+const db = getFirestore();
+
+// Example API route: GET all users
+app.get("/api/users", async (req, res) => {
+  try {
+    const snapshot = await db.collection("users").get();
+    const users = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Example API route: POST a new user
+app.post("/api/users", async (req, res) => {
+  try {
+    const { name, age } = req.body;
+    const docRef = await db.collection("users").add({ name, age });
+    res.status(201).json({ id: docRef.id, name, age });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Start server
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+```
+3. Run your server:
+```bash
+node server.js
+```
+GET users: http://localhost:3001/api/users and POST new user: Send JSON { "name": "John", "age": 30 } to the same URL.
+ 
 
 
 

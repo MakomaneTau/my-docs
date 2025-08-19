@@ -89,6 +89,16 @@ See [workflow/git-methodology.md](workflow/git-methodology.md) for our full bran
 
 See [documentation/architecture.md](documentation/architecture.md) for full details.
 
+## Initial Designs
+
+See the link below for our design prototypes for the core features of the system.
+https://www.figma.com/proto/9nLRwWxWq9rGt9MRAzd8gs/Virtual-pen-pals?node-id=29-6&t=iS525tzkq7e2lfdT-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=29%3A6
+
+## GitHub repository link
+
+Access our GitHub repository.
+https://github.com/usmiso/GlobeTalk.git
+
 **Summary:**  
 GlobeTalk uses a modular architecture with a Next.js frontend, a backend API for matchmaking and messaging, a NoSQL database for storing users, profiles, matches, and messages, and a worker/scheduler for delayed message delivery. The data model is privacy-focused, with anonymous IDs and moderation logs to ensure safety.
 

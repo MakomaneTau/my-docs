@@ -8,22 +8,23 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## Table of contents
-1. [Quick summary](#quick-summary)
-2. [Team member roles](#team-member-roles)
-3. [Project Management Methodology](#project-management-methodology)
-4. [Features](#features)  
-5. [Tech stack](#tech-stack) 
-6. [Git Methodology](#git-Methodology)  
-7. [Architecture & data model](#architecture--data-model)  
-8. [API endpoints](#api-endpoints)  
-9. [Local setup & development](#local-setup--development)  
-10. [Testing & CI](#testing--ci)  
-11. [Sprint 1 deliverables](#sprint-1-deliverables-rubric-aligned)  
-12. [Privacy, safety & moderation](#privacy-safety--moderation)  
-13. [Contributing](#contributing)  
-14. [Contact & support](#contact--support)  
-15. [License](#license)
 
+1. Quick summary
+2. Team member roles
+3. Project Management Methodology
+4. Features
+5. Tech stack
+6. Git Methodology
+7. Architecture & data model
+8. API endpoints
+9. Local setup & development
+10. Development Guide 
+11. Testing & CI
+12. Sprint 1 deliverables
+13. Privacy, safety & moderation
+14. Contributing
+15. Contact & support
+16. License
 ---
 
 ## Quick summary
@@ -90,6 +91,117 @@ See [documentation/architecture.md](documentation/architecture.md) for full deta
 
 **Summary:**  
 GlobeTalk uses a modular architecture with a Next.js frontend, a backend API for matchmaking and messaging, a NoSQL database for storing users, profiles, matches, and messages, and a worker/scheduler for delayed message delivery. The data model is privacy-focused, with anonymous IDs and moderation logs to ensure safety.
+
+
+# Development Guide
+
+## 1. Introduction
+This guide explains how to set up, develop, and contribute to the GlobeTalk web application. It is intended for developers working on the project, both current team members and future contributors.
+
+---
+
+## 2. Prerequisites
+Ensure the following tools are installed:
+
+- Node.js (v18+)
+- npm (comes with Node.js) or Yarn
+- Git
+- Code editor (VS Code recommended)
+- Firebase CLI (if working with Firestore/Storage)
+
+---
+
+## 3. Installation & Setup
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/MakomaneTau/GlobeTalk.git
+cd GlobeTalk
+
+2. **Install dependencies:**
+```bash
+npm install
+
+3. **Set up envirinment variables**
+Set up environment variables:
+
+Copy .env.example → .env.local
+
+Add Firebase config, API keys, or other credentials
+
+Project Structure
+
+4. **Project Structure**
+/pages → Next.js page routes
+/components → Reusable UI components
+/styles → Tailwind or global styles
+/lib → Helper functions and utilities
+/public → Static assets (images, icons)
+/tests → Unit and integration tests
+
+
+5. **Development Workflow**
+- **Branching strategy:**
+  - `main` → production
+  - `develop` → staging/dev
+  - `feature/*` → feature branches
+- **Commit conventions:**  
+  Use clear commit messages, e.g., `feat: add login form`
+- **Linting & formatting:**
+```bash
+npm run lint
+
+6. **Running & Testing**
+```bash
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+npm start
+
+# Run tests
+npm run test
+
+7. **Deployment**
+```bash
+# Hosted on Vercel (optimized for Next.js)
+
+# Production deployment
+# Push changes to main branch to trigger deployment
+
+# Staging deployment
+# Push changes to develop branch to trigger staging
+
+# Note: Make sure all required environment variables are set in the hosting platform
+
+8. **Troubleshooting**
+
+- **Port 3000 already in use:**  
+  Run `npm run dev -- -p 4000` to use a different port.
+
+- **Missing environment variables:**  
+  Check your `.env.local` file and make sure all required variables are present.
+
+- **Build errors:**  
+  Run `npm run lint` and fix any issues reported.
+
+- **Firebase connection issues:**  
+  Ensure credentials in `.env.local` match your Firebase project.
+
+---
+
+9. **Codebase Overview**
+
+- **Frontend:** Next.js pages and components (`/pages`, `/components`)  
+- **Backend/API:** API routes within `/pages/api`  
+- **Styles:** Tailwind CSS or global styles in `/styles`  
+- **Utilities:** Helper functions in `/lib`  
+- **Static assets:** Stored in `/public`  
+- **Tests:** Unit and integration tests in `/tests`  
+- **Configuration:** `package.json`, `.eslintrc`, `next.config.js`  
+
+
 
 
 

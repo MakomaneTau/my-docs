@@ -22,3 +22,4 @@
   ![Sprint Planning Screenshot](../../images/testingpart1.png)
   ![Sprint Planning Screenshot](../../images/testingpart2.png)
   ![Sprint Planning Screenshot](../../images/testingpart3.png)
+<img width="919" height="713" alt="image" src="https://github.com/user-attachments/assets/356e7b11-e94d-40e8-bcd0-7df9e424420c" />

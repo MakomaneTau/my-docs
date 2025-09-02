@@ -165,9 +165,79 @@ node server.js
 GET users: http://localhost:3001/api/users and POST new user: Send JSON { "name": "John", "age": 30 } to the same URL.
  
 
+## Third Party Code Documentation
 
+Our project makes use of several third-party libraries and APIs to improve efficiency,
+provide essential functionality, and ensure maintainability. Below is a list of all
+important third-party code used, with documentation links and justifications.
 
+**Frontend(Next.js+React)**
 
+- Next.js (v14)
+```bash
+o Docs: https://nextjs.org/docs
+o Justification: Next.js was chosen for its powerful server-side rendering
+and routing features. It simplifies building scalable web applications and
+provides built-in optimizations for performance.
+```
+- React (v18)
+```bash
+o Docs: https://react.dev/
+o Justification: React is the core library for building reusable UI
+components. It enables efficient state management and component-
+driven development.
+```
+- Tailwind CSS (v3)
+```bash
+o Docs: https://tailwindcss.com/docs
+o Justification: Tailwind CSS provides a utility-first approach to styling,
+making it faster to build and maintain consistent user interfaces.
+```
+- Next.js built-in modules:
+```bash
+o next/link (routing between pages)
+o next/navigation (client-side navigation APIs)
+o next/image (optimized image rendering)
+o Docs: Next.js Components
+o Justification: These built-in features streamline navigation, routing, and
+image optimization within the app.
+```
+
+**APIs / External Services**
+
+- DiceBear Avatars API
+```bash
+o Docs: https://www.dicebear.com/styles/
+o Justification: Used for generating random avatars for users, improving
+personalization and user experience without needing manual uploads.
+```
+- RandomUser API (randomuser.me)
+```bash
+o Docs: https://randomuser.me/documentation
+o Justification: Used to generate random user profiles during testing and
+development, ensuring realistic test data
+```
+
+**Backend (Node.js + Express)**
+
+- Express.js (v4)
+```bash
+o Docs: https://expressjs.com/
+o Justification: Express provides a lightweight and flexible framework for
+building backend REST APIs, handling routes, and connecting to the
+frontend
+```
+- CORS
+```bash
+o Docs: https://www.npmjs.com/package/cors
+o Justification: Ensures secure cross-origin communication between
+frontend and backend, preventing browser security errors.
+```
+- Firebase Admin SDK
+```bash
+o Docs: https://firebase.google.com/docs/admin/setup
+o Justification: Provides secure access to Firebase services such as authentication and Firestore database management from the backend.
+```
 
 
 

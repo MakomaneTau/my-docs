@@ -1,4 +1,4 @@
-## Architecture & Data Model
+<!-- ## Architecture & Data Model
 
 ### High-Level Components
 - **Frontend (Next):** UI, authentication redirect, profile flow  
@@ -92,4 +92,99 @@ moderation_logs
 - `POST /admin/moderation/:reportId/action` — Moderator resolves report
 - `DELETE /users/:uid` — Delete user account (self or admin)
 
----
+--- -->
+
+
+## Database Documentation
+
+**Choice of Database** : 
+We used Firebase Firestore as our project’s database.
+
+- Justification: Firestore was chosen because it is a flexible, cloud-based NoSQL
+database that integrates seamlessly with Firebase Authentication and other
+Firebase services. It provides real-time data synchronization, which is essential
+for responsive user experiences. In addition, Firestore’s scalability and
+serverless nature reduce the need for manual database management.
+
+
+
+
+- Docs: https://firebase.google.com/docs/firestore
+
+
+**Database Schema** :
+
+Our schema is organized into collections and documents rather than relational tables.
+Below is the current structure:
+
+
+- Profiles Collection
+
+```NoSQL
+profiles collection
+{
+    "avatarUrl": "string-Generated via DiceBear",
+    "hobbies": "array",
+    "intro": "string",
+    "languages": "string",
+    "timezone": "string",
+    "userID": "string"
+}
+```
+
+
+- Users Collection
+
+```NoSQL
+users collection
+{
+    "userID": "string",
+    "createdAt": "timestamp",
+
+}
+```
+
+
+- Match Collection
+```NoSQL
+match collection
+{
+    "matchID": "string",
+    "user1": "string",
+    "user2": "string",
+}
+```
+
+**Deployment Information**
+
+- Frontend Deployment:
+
+```bash
+o Hosted on Netlify for fast global delivery.
+o Frontend communicates with backend via API calls to Railway.
+```
+
+- Backend Deployment:
+```bash
+o Hosted on Railway.
+o Backend (Express.js) connects to Firestore using the Firebase Admin SDK.
+```
+
+- Database Deployment:
+```bash
+o Firestore is fully managed in the cloud by Firebase.
+o No manual server provisioning is needed.
+o Authentication and security rules are managed through Firebase Console.
+```
+
+
+
+
+
+
+
+
+
+
+
+

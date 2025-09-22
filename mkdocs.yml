@@ -36,6 +36,9 @@ theme:
 # Navigation structure
 nav:
   - Home: index.md
+  - Tutorials:
+    - Introduction: tutorials/intro.md
+    - Advanced Topics: tutorials/advanced.md
   - Getting Started:
       - Development: getting-started/dev-setup.md
       - Installation: getting-started/installation.md

@@ -118,6 +118,53 @@ Our schema is organized into collections and documents rather than relational ta
 Below is the current structure:
 
 
+- Chats Collection
+```NoSQL
+chats collection
+{
+    "chatID": "string",
+    "createdAt": timestamp,
+    "messages": (array)[
+        {
+            "delaySeconds": number,
+            "deliveryTime": number,
+            "sender": "string",
+            "sentAt": number,
+            "text": "string"
+        },
+        {
+            "delaySeconds": number,
+            "deliveryTime": number,
+            "sender": "string",
+            "sentAt": number,
+            "text": "string"
+        },
+        {
+            "delaySeconds": number,
+            "deliveryTime": number,
+            "sender": "string",
+            "sentAt": number,
+            "text": "string"
+        }
+    ],
+    "users": [
+        "string",
+        "string"
+    ]
+}
+```
+
+- Match Collection
+```NoSQL
+match collection
+{
+    "matchID": "string",
+    "user1": "string",
+    "user2": "string",
+}
+```
+
+
 - Profiles Collection
 
 ```NoSQL
@@ -129,6 +176,26 @@ profiles collection
     "languages": "string",
     "timezone": "string",
     "userID": "string"
+}
+```
+
+
+- Reports Collection
+```NoSQL
+reports collection
+{
+    "chatID": "string",
+    "message": {
+        "delaySeconds": "number",
+        "deliveryTime": "number",
+        "sender": "string",
+        "sentAt": "number",
+        "text": "string"
+    },
+    "reason": "string",
+    "reportedAt": "number",
+    "reporter": "string",
+    "status": "string",
 }
 ```
 
@@ -145,15 +212,8 @@ users collection
 ```
 
 
-- Match Collection
-```NoSQL
-match collection
-{
-    "matchID": "string",
-    "user1": "string",
-    "user2": "string",
-}
-```
+
+
 
 **Deployment Information**
 

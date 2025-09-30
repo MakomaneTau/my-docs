@@ -44,7 +44,7 @@
 
 
 
-## Sprint 2 meeting evidence -->
+<!-- ## Sprint 2 meeting evidence --> -->
 
 # Testing Documentation
 
@@ -138,6 +138,8 @@ json
 ```
 
 After running coverage, Jest will generate a \`coverage/\` folder and a summary in the terminal. If integrated with **Codecov**, the results can be uploaded to their dashboard automatically from GitHub Actions.
+
+# Tests for sprint 3, tests completed, and tests for future
 
 
 

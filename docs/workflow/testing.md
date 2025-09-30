@@ -140,6 +140,13 @@ json
 After running coverage, Jest will generate a \`coverage/\` folder and a summary in the terminal. If integrated with **Codecov**, the results can be uploaded to their dashboard automatically from GitHub Actions.
 
 # Tests for sprint 3, tests completed, and tests for future
+1. The following screenshort represents all the tests for this sprint 3, and is an indication of the tests we were able to complete.
+  ![Sprint Review Screenshot](../../images/testsRan.jpg)
+
+2. Tests that we plan on running in the future includes for the page admin/page.js, pages/reports. It falls under Safety and moderation.
+
+3. The follwing shows code cov achieved for sprint 3
+  ![Sprint Review Screenshot](../../images/codeCovSprint3.jpg)
 
 
 

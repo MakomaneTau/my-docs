@@ -21,9 +21,10 @@
 10. [Testing & CI](#testing--ci)  
 11. [Sprint 1 deliverables](#sprint-1-deliverables-rubric-aligned)  
 12. [Privacy, safety & moderation](#privacy-safety--moderation)  
-13. [Contributing](#contributing)  
-14. [Contact & support](#contact--support)  
-15. [License](#license)
+13. [NPM Audit](#npm-audit)
+14. [Contributing](#contributing)  
+15. [Contact & support](#contact--support)  
+16. [License](#license)
 
 ---
 
@@ -120,6 +121,20 @@ See [workflow/testing.md](workflow/testing.md) for full details on our testing s
 - [x] User authentication (email, Google OAuth)
 - [x] Responsive UI (Next.js + Tailwind CSS)
 - [x] Netlify deployment
+
+---
+
+## NPM Audit
+
+In response to recent supply chain attacks on NPM packages, we have conducted a comprehensive security audit of our dependencies. This audit addresses the security vulnerabilities and provides protection measures against compromised packages.
+
+**Key Areas Covered:**
+- Analysis of recent NPM supply chain attacks (Debug/Chalk and TinyColor incidents)
+- Assessment of our package dependencies for compromise
+- Implementation of protective measures against upstream package infections
+- Automated security testing tools for continuous monitoring
+
+For the complete security audit report, including detailed vulnerability assessments, compromised package analysis, and implemented security measures, see: [NPM Audit Report](reports/npm-audit.md)
 
 ---
 

@@ -21,6 +21,37 @@ Our schema is organized into collections and documents rather than relational ta
 Below is the current structure:
 
 
+- Availible Languages Collection
+
+```NoSQL
+available_languages collection
+{
+    "name": "string",
+}
+```
+
+
+- Availible Countries Collection
+
+```NoSQL
+availible_countries collection
+{
+    "name": "string",
+}
+```
+
+- Blocked Users Collection
+
+```NoSQL
+blocked users collection
+{
+    "createdAt": "timestamp",
+    "source": "string",
+    "userID": "string",
+}
+```
+
+
 - Chats Collection
 ```NoSQL
 chats collection
@@ -114,16 +145,25 @@ users collection
 }
 ```
 
+
+
+
+
+
+
+
+
+
 ### Data
 
 **Production vs Testing Data**:
 Most of the current data is for testing purposes.
 
-Total records: [fill in number]
+Total records: 13. Since this is an annymous application and security reasons, I cannot disclose the account details of our Testing or/and especially the Production data.  
 
-Production data: [fill in number or percentage]
+Testing data: 7, which consist of 54% of Total records.
 
-Testing data: [fill in number or percentage]
+Production data: 6, which consist of 46% of Total records.
 
 **Notes**:
 Even with a small amount of production data, Firestore’s real-time sync and validation rules ensure that data integrity is maintained.
@@ -156,7 +196,7 @@ o Authentication and security rules are managed through Firebase Console.
 ### Database Structure and Best Practices
 
 1. Structure:
-The database is organized using collections and documents, following Firestore best practices:
+The database is organized using collections and documents(not really relational), following Firestore best practices:
 
     - Group related data logically into collections (e.g., chats, users, reports).
 

@@ -46,9 +46,10 @@ nav:
       - Architecture: documentation/architecture.md
       - App Design : documentation/AppDesigns.md
       - Features:
-          - Feature 1: documentation/features/feature1.md
-          - Feature 2: documentation/features/feature2.md
-          - Feature 3: documentation/features/feature3.md
+          - Feature 1: documentation/Features/feature1.md
+          - Feature 2: documentation/Features/feature2.md
+          - Feature 3: documentation/Features/feature3.md
+          - Feature 4: documentation/Features/feature4.md
       - Uml Diagrams:
           - Sprint 1: documentation/uml/sprint1.md
           - Sprint 2: documentation/uml/sprint2.md

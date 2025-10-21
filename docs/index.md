@@ -18,13 +18,12 @@
 7. [Architecture & data model](#architecture--data-model)  
 8. [API endpoints](#api-endpoints)  
 9. [Local setup & development](#local-setup--development)  
-10. [Testing & CI](#testing--ci)  
-11. [Sprint 1 deliverables](#sprint-1-deliverables-rubric-aligned)  
-12. [Privacy, safety & moderation](#privacy-safety--moderation)  
-13. [NPM Audit](#npm-audit)
-14. [Contributing](#contributing)  
-15. [Contact & support](#contact--support)  
-16. [License](#license)
+10. [Testing & CI](#testing--ci)    
+11. [Privacy, safety & moderation](#privacy-safety--moderation)  
+12. [NPM Audit](#npm-audit)
+13. [Contributing](#contributing)  
+14. [Contact & support](#contact--support)  
+15. [License](#license)
 
 ---
 

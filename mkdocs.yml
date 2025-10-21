@@ -72,9 +72,9 @@ plugins:
   - search
   - tags
   - awesome-pages
-  - git-revision-date-localized:
-      timezone: "Etc/UTC"
-      fallback_to_build_date: true
+  # - git-revision-date-localized:
+  #     timezone: "Etc/UTC"
+  #     fallback_to_build_date: true
   - minify:
       minify_html: true
 

@@ -56,11 +56,10 @@ nav:
           - Sprint 4: documentation/uml/sprint4.md
 
   - Workflow:
-      - Release Notes: workflow/release-notes.md
-      - Git Methodology: workflow/git-methodology.md
-      - Testing and Quality Assurance: workflow/testing.md
-      - Sprint Checklist: workflow/sprint-checklists.md
-      - Meetings: workflow/meetings.md
+    - Release Notes: workflow/release-notes.md
+    - Git Methodology: workflow/git-methodology.md
+    - Testing and Quality Assurance: workflow/testing.md
+    - Meetings: workflow/meetings.md
 
 
       

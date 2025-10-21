@@ -1,6 +1,6 @@
 # Release Notes
 
-Here are the release note summaries for the usmiso/GlobeTalk repository:
+Here are the release notes summaries for GlobeTalk:
 
 - **Sprint 3 - Full User Functionality ([v3.0.1-sprint3](https://github.com/usmiso/GlobeTalk/releases/tag/v3.0.1-sprint3), 2025-09-30)**
 	- Purpose: Enable anonymous, cross-cultural connections via delayed text letters.

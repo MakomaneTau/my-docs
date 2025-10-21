@@ -36,9 +36,14 @@ theme:
 # Navigation structure
 nav:
   - Home: index.md
-  - Tutorials:
+  - Sprint 4 Evaluation:
     - Introduction: tutorials/intro.md
     - Advanced Topics: tutorials/advanced.md
+    - Misc: tutorials/misc.md
+    - API: tutorials/api.md
+    - WebApp: tutorials/webapp.md
+
+
   - Getting Started:
       - Development: getting-started/dev-setup.md
       - Installation: getting-started/installation.md

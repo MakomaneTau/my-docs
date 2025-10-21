@@ -117,12 +117,6 @@ See [workflow/testing.md](workflow/testing.md) for full details on our testing s
 
 ---
 
-## Sprint 1 Deliverables
-- [x] User authentication (email, Google OAuth)
-- [x] Responsive UI (Next.js + Tailwind CSS)
-- [x] Netlify deployment
-
----
 
 ## NPM Audit
 

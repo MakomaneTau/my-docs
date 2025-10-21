@@ -1,4 +1,4 @@
-site_name: My Project Documentation
+site_name: GlobeTalk(Code&Coffee) Documentation Site
 site_url: https://USERNAME.github.io/REPO
 site_description: Official documentation for My Project
 site_author: My Team
@@ -63,8 +63,6 @@ nav:
 
 
       
-  - Reports:
-      - Makomane Tau (2652227): reports/2652227.md
 ###########################################
 # Plugins
 plugins:

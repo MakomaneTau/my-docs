@@ -169,6 +169,94 @@
     - Continued questionnaire feedback system
     - Distributed/collected forms
 
+## Sprint 4 Meeting Evidence
+
+- **Meeting 1: Sprint Planning (Admin & Moderation Scope)**
+  - **Date:** 29 September 2025  
+  - **Venue:** Online (Google Meet)
+  - **Agenda & Discussions:**
+    - Defined the scope for Sprint 4: Admin Moderation, Reports Dashboard, and Core Safety Features.
+    - Outlined user-facing moderation tools: Report (with reasons like "Spam", "Harassment"), Block, and Unblock.
+    - Discussed user data deletion upon account removal.
+    - Planned the "Reports Page" as the central admin dashboard, accessible only to authorized admin emails.
+    - Initial discussion on backend persistence: all reports, blocks, and admin actions must be logged in Firestore.
+  - **Decisions Made:**
+    - Prioritize the "Reports Page" as the primary deliverable.
+    - Task allocation:
+      - Backend: Create admin-only access middleware, design Firestore schema for reports and the blocked_users collection, build initial endpoints for "Validate" and "Invalidate".
+      - Frontend: Build the Reports Page UI, including the main table structure and admin-only page guard.
+
+- **Meeting 2: Backend Architecture & Security**
+  - **Date:** 02 October 2025  
+  - **Venue:** Online (WhatsApp Group Call)
+  - **Agenda & Discussions:**
+    - Reviewed security and supply chain requirements.
+    - Discussed implementation of automated scripts (scan-compromised.js/py) for CI.
+    - Emphasized best practices: pinning versions, running audits, and secret scanning.
+    - Defined the API for admin actions: "Validate" and "Invalidate" must update the report status in Firestore.
+    - Planned the audit trail for blocking: must store admin email, time, and source (e.g., "reports_page").
+    - Confirmed health checks and Open API (Swagger) docs are needed for all new admin endpoints.
+  - **Decisions Made:**
+    - Backend team to implement security scripts and CI guardrails.
+    - Finalized the Firestore schema for the blocked_users collection to include audit info.
+    - All admin moderation endpoints (block, validate, invalidate) will be developed.
+
+- **Meeting 3: Reports Page UI & Data Flow**
+  - **Date:** 06 October 2025  
+  - **Venue:** In-person
+  - **Agenda & Discussions:**
+    - Reviewed UI mockups for the Reports Page table.
+    - Finalized table columns: Report ID, Offense, Reporter, Reported User, Message, Date, Status, Severity, Actions.
+    - Discussed "Severity" logic: how to automatically tag reports (e.g., "harassment" = High, "spam" = Low).
+    - Planned the data flow for the frontend: fetching the report list from the backend.
+    - Discussed empty/error state handling for the reports table.
+  - **Decisions Made:**
+    - Frontend will implement the table layout and static action buttons (Validate/Invalidate).
+    - Backend will create the endpoint to fetch all reports and include the calculated severity level in the response.
+    - The "Message" content will be displayed for context.
+
+- **Meeting 4: Polling and Real-time Updates (Sprint Fine Touches)**
+  - **Date:** 10 October 2025  
+  - **Venue:** Online (Google Meet)
+  - **Agenda & Discussions:**
+    - Addressed the "Fine Touch" requirement for real-time updates.
+    - Evaluated WebSockets vs. polling; decided on polling for simplicity and robustness.
+    - Discussed the polling mechanism: auto-refresh the report list every 5 seconds.
+    - Planned for failure: polling should pause or back off if there are repeated API failures.
+    - Reviewed frontend implementation of "Validate" and "Invalidate" actions and their connection to the backend API.
+  - **Decisions Made:**
+    - Implement a 5-second polling interval on the Reports Page.
+    - The page will include an on-demand "Refresh" button as a fallback.
+    - Frontend team to add feedback (e.g., "Success", "Error") for all admin actions.
+
+- **Meeting 5: Violation Count & Block Threshold Integration**
+  - **Date:** 15 October 2025  
+  - **Venue:** In-person (Paired Programming Session)
+  - **Agenda & Discussions:**
+    - Focused on integrating violation counts (a "Fine Touch" feature).
+    - Backend: Create logic to count validated violations for each user.
+    - Frontend: Display the "Violation Count" for the reported user in each report row.
+    - Implemented the core "Block User" threshold logic: If a user has $\geq 3$ violations and is not already blocked, the "Block User" button must appear.
+    - Tested the end-to-end flow: Admin clicks "Block User" $\rightarrow$ API call $\rightarrow$ user profile updated $\rightarrow$ blocked_users collection updated $\rightarrow$ button text changes to "Blocked" or disappears.
+  - **Decisions Made:**
+    - The violation count is successfully pulled and displayed.
+    - The conditional "Block User" button logic is implemented and tied to the backend block endpoint.
+    - Confirmed that a block action prevents the user from appearing in matchmaking and sending messages.
+
+- **Meeting 6: Final Review, Sorting, & Error Handling**
+  - **Date:** 19 October 2025  
+  - **Venue:** Online (Google Meet)
+  - **Agenda & Discussions:**
+    - Conducted a full demo of the Reports Page.
+    - Implemented "Fine Touch": enhanced sorting for the reports table (by Severity, Date, Status).
+    - Reviewed and tested all backend and frontend error handling (e.g., API failures, invalid permissions).
+    - Confirmed admin-only access control is secure.
+    - Verified all moderation actions (validate, invalidate, block) are correctly logged and persisted in Firestore with full traceability.
+  - **Decisions Made:**
+    - The Reports Page and all associated moderation logic are feature-complete.
+    - Sorting and polishing are finalized.
+    - The feature is ready for final QA and deployment.
+
 ---
 
 ### Stakeholder Meeting Decisions & Agreements
